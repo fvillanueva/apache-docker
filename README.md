@@ -2,7 +2,7 @@
 
 - **Docker build image from Dockerfile:**
  
- `docker build -t intro-docker-php`
+ `docker build -t intro-docker-php .`
  
  - **Docker run:**
  
