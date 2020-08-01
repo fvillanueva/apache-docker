@@ -1,3 +1,5 @@
+# Docker compose - Usando
+# una imagen de php con apache y montando un volumen local de Windows
 version: '3.7'
 services:
   app:
