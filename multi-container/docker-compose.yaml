@@ -5,10 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - DISPLAY_ERRORS=On
-      - MYSQL_HOST=mysql
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
+      - DISPLAY_ERRORS
+      - MYSQL_HOST
+      - MYSQL_USER
+      - MYSQL_PASSWORD
     ports:
       - 8000:80
     depends_on:
@@ -17,7 +17,7 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - /d/proyectos/PHP/intro-docker/multi-container/migrations:/docker-entrypoint-initdb.d
 
